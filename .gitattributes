@@ -1,0 +1,3 @@
+# Preserve bytes used by the corpus and evaluation freeze checks on Windows.
+data/corpus.json -text
+evaluate.py -text

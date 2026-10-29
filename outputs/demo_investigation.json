@@ -1,0 +1,250 @@
+{
+  "investigation": {
+    "id": "39255989-74a3-41cd-9f18-2ba20ccd60f5",
+    "created_at": "2026-10-26T11:46:11.377612+00:00",
+    "request": {
+      "case_id": "EX-1042",
+      "question": "What delay reason did the supplier report?",
+      "mode": "local_ai",
+      "model": "qwen2.5:1.5b",
+      "prompt_version": "v2"
+    },
+    "case_snapshot": {
+      "id": "EX-1042",
+      "title": "Inbound delivery delayed",
+      "category": "Delay",
+      "severity": "High",
+      "supplier": "Harbor Materials",
+      "hub": "North hub",
+      "summary": "A reported breakdown moved the estimated arrival. Actual receipt is not confirmed.",
+      "authored_flag": "Reported reason; unverified arrival",
+      "synthetic": true,
+      "suggested_question": "What delay reason did the supplier report?",
+      "timeline": [
+        {
+          "timestamp": "2026-03-13T14:00:00+00:00",
+          "label": "Supplier delay notice",
+          "source_id": "EX-1042-NOTICE"
+        },
+        {
+          "timestamp": "2026-03-13T14:20:00+00:00",
+          "label": "Carrier departure scan",
+          "source_id": "EX-1042-SCAN"
+        },
+        {
+          "timestamp": "2026-03-13T14:40:00+00:00",
+          "label": "Planning follow-up",
+          "source_id": "EX-1042-NOTE"
+        }
+      ]
+    },
+    "sources": [
+      {
+        "id": "SOP-DELAY",
+        "case_id": null,
+        "title": "Delayed delivery review",
+        "kind": "procedure",
+        "recorded_at": "2026-03-13T14:00:00+00:00",
+        "text": "For a delayed shipment, record the reported reason and revised estimated arrival. Request a current carrier status before escalating to the planning owner. An estimate is not a delivery confirmation.",
+        "synthetic": true
+      },
+      {
+        "id": "SOP-DAMAGE",
+        "case_id": null,
+        "title": "Damaged receipt handling",
+        "kind": "procedure",
+        "recorded_at": "2026-03-13T14:00:00+00:00",
+        "text": "For damaged cartons, keep affected goods in quarantine. Record counts, photographs and lot identifiers. A quality reviewer must authorize release or replacement; a supplier request is not authorization.",
+        "synthetic": true
+      },
+      {
+        "id": "SOP-QUANTITY",
+        "case_id": null,
+        "title": "Disputed quantity reconciliation",
+        "kind": "procedure",
+        "recorded_at": "2026-03-13T14:00:00+00:00",
+        "text": "When dispatch and receiving quantities disagree, preserve both records and request a joint recount. Keep the final accepted quantity unresolved until the designated receiving owner signs the reconciliation.",
+        "synthetic": true
+      },
+      {
+        "id": "SOP-TEMP",
+        "case_id": null,
+        "title": "Missing temperature records",
+        "kind": "procedure",
+        "recorded_at": "2026-03-13T14:00:00+00:00",
+        "text": "If a required temperature logger file is missing, quarantine the affected goods and request the logger file. The quality owner must review the data before release. Do not infer measured temperatures from shipping setpoints.",
+        "synthetic": true
+      },
+      {
+        "id": "SOP-POD",
+        "case_id": null,
+        "title": "Unsigned proof-of-delivery review",
+        "kind": "procedure",
+        "recorded_at": "2026-03-13T14:00:00+00:00",
+        "text": "For an unsigned proof-of-delivery record, request a signed document and verify receipt with the destination team. Preserve the carrier status as a report. Do not mark receipt as confirmed using the portal status alone.",
+        "synthetic": true
+      },
+      {
+        "id": "SOP-SUB",
+        "case_id": null,
+        "title": "Substitute material approval",
+        "kind": "procedure",
+        "recorded_at": "2026-03-13T14:00:00+00:00",
+        "text": "Before accepting a substitute material, obtain written engineering change approval and confirm the required specification. A supplier proposal is not approval. Keep the alternative on hold until the authorized reviewer responds.",
+        "synthetic": true
+      },
+      {
+        "id": "SOP-CUSTOMS",
+        "case_id": null,
+        "title": "Fictional border-document checklist",
+        "kind": "procedure",
+        "recorded_at": "2026-03-13T14:00:00+00:00",
+        "text": "For missing border paperwork in this demonstration, collect the certificate of origin and supporting invoice, then ask the document owner to review completeness. Do not invent a clearance time. This fictional checklist is not customs or legal advice.",
+        "synthetic": true
+      },
+      {
+        "id": "EX-1042-NOTICE",
+        "case_id": "EX-1042",
+        "title": "Supplier delay notice",
+        "kind": "supplier_notice",
+        "recorded_at": "2026-03-13T14:00:00+00:00",
+        "text": "For shipment SH-1042, Harbor Materials reported a vehicle breakdown. Its revised estimated arrival is 14 March 2026 at 18:00. This is an unverified supplier estimate; no delivery confirmation is attached.",
+        "synthetic": true
+      },
+      {
+        "id": "EX-1042-SCAN",
+        "case_id": "EX-1042",
+        "title": "Carrier departure scan",
+        "kind": "carrier_record",
+        "recorded_at": "2026-03-13T14:20:00+00:00",
+        "text": "Carrier scan for shipment SH-1042 records departure from West depot at 11:20 on 13 March 2026. The departure scan does not confirm arrival.",
+        "synthetic": true
+      },
+      {
+        "id": "EX-1042-NOTE",
+        "case_id": "EX-1042",
+        "title": "Planning follow-up",
+        "kind": "internal_note",
+        "recorded_at": "2026-03-13T14:40:00+00:00",
+        "text": "The planning owner requested a fresh carrier status. The root cause and actual delivery time have not been independently verified.",
+        "synthetic": true
+      }
+    ],
+    "retrieved": [
+      {
+        "id": "EX-1042-NOTICE:p1",
+        "document_id": "EX-1042-NOTICE",
+        "case_id": "EX-1042",
+        "kind": "supplier_notice",
+        "title": "Supplier delay notice",
+        "text": "For shipment SH-1042, Harbor Materials reported a vehicle breakdown. Its revised estimated arrival is 14 March 2026 at 18:00. This is an unverified supplier estimate; no delivery confirmation is attached.",
+        "recorded_at": "2026-03-13T14:00:00+00:00",
+        "tfidf_similarity": 0.153996,
+        "fusion_score": 0.03252247,
+        "lexical_rank": 2
+      },
+      {
+        "id": "SOP-DELAY:p1",
+        "document_id": "SOP-DELAY",
+        "case_id": null,
+        "kind": "procedure",
+        "title": "Delayed delivery review",
+        "text": "For a delayed shipment, record the reported reason and revised estimated arrival. Request a current carrier status before escalating to the planning owner. An estimate is not a delivery confirmation.",
+        "recorded_at": "2026-03-13T14:00:00+00:00",
+        "tfidf_similarity": 0.096554,
+        "fusion_score": 0.03252247,
+        "lexical_rank": 1
+      },
+      {
+        "id": "SOP-POD:p1",
+        "document_id": "SOP-POD",
+        "case_id": null,
+        "kind": "procedure",
+        "title": "Unsigned proof-of-delivery review",
+        "text": "For an unsigned proof-of-delivery record, request a signed document and verify receipt with the destination team. Preserve the carrier status as a report. Do not mark receipt as confirmed using the portal status alone.",
+        "recorded_at": "2026-03-13T14:00:00+00:00",
+        "tfidf_similarity": 0.067064,
+        "fusion_score": 0.03174603,
+        "lexical_rank": 3
+      }
+    ],
+    "generation": {
+      "state": "checked",
+      "attempted": true,
+      "completed": true,
+      "draft": {
+        "status": "supported",
+        "evidence": [
+          {
+            "passage_id": "EX-1042-NOTICE:p1",
+            "quote": "For shipment SH-1042, Harbor Materials reported a vehicle breakdown. Its revised estimated arrival is 14 March 2026 at 18:00. This is an unverified supplier estimate; no delivery confirmation is attached."
+          }
+        ]
+      },
+      "raw": "{\"status\": \"supported\", \"evidence\": [{\"passage_id\": \"EX-1042-NOTICE:p1\", \"quote\": \"For shipment SH-1042, Harbor Materials reported a vehicle breakdown. Its revised estimated arrival is 14 March 2026 at 18:00. This is an unverified supplier estimate; no delivery confirmation is attached.\"}]}",
+      "errors": [],
+      "seconds": 3.478558,
+      "model": "qwen2.5:1.5b",
+      "model_digest": "65ec06548149b04c096a120e4a6da9d4017ea809c91734ea5631e89f96ddc57b",
+      "ollama_version": "0.40.11",
+      "prompt_version": "v2",
+      "prompt_sha256": "c74808c1c469bafb4eb89c9c4005995b3e5fb7abc569c9221889b441ec9a68ed",
+      "options": {
+        "temperature": 0,
+        "seed": 42,
+        "num_predict": 260,
+        "num_ctx": 4096,
+        "num_thread": 4,
+        "num_gpu": 0
+      },
+      "input_context": [
+        {
+          "passage_id": "EX-1042-NOTICE:p1",
+          "kind": "supplier_notice",
+          "text": "For shipment SH-1042, Harbor Materials reported a vehicle breakdown. Its revised estimated arrival is 14 March 2026 at 18:00. This is an unverified supplier estimate; no delivery confirmation is attached."
+        },
+        {
+          "passage_id": "SOP-DELAY:p1",
+          "kind": "procedure",
+          "text": "For a delayed shipment, record the reported reason and revised estimated arrival. Request a current carrier status before escalating to the planning owner. An estimate is not a delivery confirmation."
+        },
+        {
+          "passage_id": "SOP-POD:p1",
+          "kind": "procedure",
+          "text": "For an unsigned proof-of-delivery record, request a signed document and verify receipt with the destination team. Preserve the carrier status as a report. Do not mark receipt as confirmed using the portal status alone."
+        }
+      ],
+      "schema_sha256": "91c068bed4f32c39b64d5f37146876df5c5db9036e107dc9aae6fdec7d7ef037",
+      "done_reason": "stop",
+      "token_counts": {
+        "prompt": 438,
+        "generated": 90
+      }
+    },
+    "corpus_sha256": "c1345f9f7bd7b1516b0017100897ffd7a1da014589ed367422f8fc4daa06ca9f",
+    "engine_sha256": "61d4d4d854ffa116abdd376a3770554fbe232e73faaf8013b72ecf06405981ee",
+    "engine_version": "1.0.0",
+    "settings": {
+      "top_k": 4,
+      "minimum_tfidf": 0.06,
+      "fusion": "reciprocal rank fusion, k=60",
+      "seed": 42
+    },
+    "runtime": {
+      "python": "3.12.14",
+      "scikit-learn": "1.9.1",
+      "fastapi": "0.162.0"
+    },
+    "seconds": 3.515077,
+    "boundary": "Quote verification checks source identity and verbatim text, not relevance or factual truth. All records are fictional; human review remains separate."
+  },
+  "reviews": [
+    {
+      "id": "a88e587b-6d70-4e28-8bcd-fc4a6c84aee2",
+      "investigation_id": "39255989-74a3-41cd-9f18-2ba20ccd60f5",
+      "created_at": "2026-10-26T11:48:52.014794+00:00",
+      "disposition": "needs_follow_up",
+      "note": "Demo review: the source reports a vehicle breakdown and an estimated arrival. Actual receipt remains unconfirmed; request a current carrier status."
+    }
+  ]
+}

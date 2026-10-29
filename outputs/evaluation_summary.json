@@ -1,0 +1,489 @@
+{
+  "ready": true,
+  "evaluated_at": "2026-10-26T11:44:03.746572+00:00",
+  "release": {
+    "model": "qwen2.5:1.5b",
+    "prompt_version": "v2",
+    "prompt_sha256": "c74808c1c469bafb4eb89c9c4005995b3e5fb7abc569c9221889b441ec9a68ed",
+    "selection": "Highest exact development task checks, then field and output checks; ties prefer 1.5B and v2.",
+    "development_questions": 6,
+    "engine_sha256": "61d4d4d854ffa116abdd376a3770554fbe232e73faaf8013b72ecf06405981ee",
+    "corpus_sha256": "c1345f9f7bd7b1516b0017100897ffd7a1da014589ed367422f8fc4daa06ca9f",
+    "frozen_at": "2026-10-26T11:33:17.851521+00:00",
+    "evaluation_script_sha256": "2cc3384cc6442fe3994af109b8d2f4c23ef77107727cbfd665f1272cea405f9c"
+  },
+  "development": [
+    {
+      "model": "qwen2.5:0.5b",
+      "prompt_version": "v1",
+      "questions": 6,
+      "task_pass": 0,
+      "task_pass_pct": 0.0,
+      "answerable": 4,
+      "retrieval_all_hit": 4,
+      "field_pass": 2,
+      "unanswerable": 2,
+      "refusal_pass": 0,
+      "displayed_answer_on_unanswerable": 2,
+      "checked": 4,
+      "withheld": 2,
+      "unavailable": 0,
+      "completed_calls": 6,
+      "mean_seconds": 1.6828545,
+      "median_seconds": 1.6825575000000002
+    },
+    {
+      "model": "qwen2.5:0.5b",
+      "prompt_version": "v2",
+      "questions": 6,
+      "task_pass": 0,
+      "task_pass_pct": 0.0,
+      "answerable": 4,
+      "retrieval_all_hit": 4,
+      "field_pass": 3,
+      "unanswerable": 2,
+      "refusal_pass": 0,
+      "displayed_answer_on_unanswerable": 2,
+      "checked": 5,
+      "withheld": 1,
+      "unavailable": 0,
+      "completed_calls": 6,
+      "mean_seconds": 1.7758653333333334,
+      "median_seconds": 1.864862
+    },
+    {
+      "model": "qwen2.5:1.5b",
+      "prompt_version": "v1",
+      "questions": 6,
+      "task_pass": 3,
+      "task_pass_pct": 50.0,
+      "answerable": 4,
+      "retrieval_all_hit": 4,
+      "field_pass": 1,
+      "unanswerable": 2,
+      "refusal_pass": 2,
+      "displayed_answer_on_unanswerable": 0,
+      "checked": 6,
+      "withheld": 0,
+      "unavailable": 0,
+      "completed_calls": 6,
+      "mean_seconds": 0.9504086666666666,
+      "median_seconds": 1.011108
+    },
+    {
+      "model": "qwen2.5:1.5b",
+      "prompt_version": "v2",
+      "questions": 6,
+      "task_pass": 5,
+      "task_pass_pct": 83.33333333333333,
+      "answerable": 4,
+      "retrieval_all_hit": 4,
+      "field_pass": 4,
+      "unanswerable": 2,
+      "refusal_pass": 1,
+      "displayed_answer_on_unanswerable": 1,
+      "checked": 6,
+      "withheld": 0,
+      "unavailable": 0,
+      "completed_calls": 6,
+      "mean_seconds": 2.086276,
+      "median_seconds": 2.181839
+    }
+  ],
+  "heldout": {
+    "questions": 18,
+    "task_pass": 15,
+    "task_pass_pct": 83.33333333333333,
+    "answerable": 12,
+    "retrieval_all_hit": 12,
+    "field_pass": 11,
+    "unanswerable": 6,
+    "refusal_pass": 5,
+    "displayed_answer_on_unanswerable": 1,
+    "checked": 17,
+    "withheld": 1,
+    "unavailable": 0,
+    "completed_calls": 18,
+    "mean_seconds": 2.2488348333333334,
+    "median_seconds": 2.2338345000000004
+  },
+  "questions": [
+    {
+      "id": "TEST-11",
+      "case_id": "EX-1047",
+      "question": "Which expected arrival does the carrier notice specifically state?",
+      "field": "carrier_eta",
+      "expected_status": "supported",
+      "retrieval_all_hit": true,
+      "task_pass": true,
+      "field_pass": true,
+      "refusal_pass": null,
+      "displayed_answer_on_unanswerable": false,
+      "state": "checked",
+      "predicted_status": "supported",
+      "model_completed": true,
+      "seconds": 4.955594,
+      "expected_passage_ids": [
+        "EX-1047-CARRIER:p1"
+      ],
+      "selected_passage_ids": [
+        "EX-1047-CARRIER:p1"
+      ]
+    },
+    {
+      "id": "TEST-07",
+      "case_id": "EX-1046",
+      "question": "What delivery status and time does the carrier portal report?",
+      "field": "reported_delivery",
+      "expected_status": "supported",
+      "retrieval_all_hit": true,
+      "task_pass": true,
+      "field_pass": true,
+      "refusal_pass": null,
+      "displayed_answer_on_unanswerable": false,
+      "state": "checked",
+      "predicted_status": "supported",
+      "model_completed": true,
+      "seconds": 2.867511,
+      "expected_passage_ids": [
+        "EX-1046-PORTAL:p1"
+      ],
+      "selected_passage_ids": [
+        "EX-1046-PORTAL:p1"
+      ]
+    },
+    {
+      "id": "TEST-04",
+      "case_id": "EX-1045",
+      "question": "Which required file was not provided with SH-1045?",
+      "field": "missing_document",
+      "expected_status": "supported",
+      "retrieval_all_hit": true,
+      "task_pass": true,
+      "field_pass": true,
+      "refusal_pass": null,
+      "displayed_answer_on_unanswerable": false,
+      "state": "checked",
+      "predicted_status": "supported",
+      "model_completed": true,
+      "seconds": 2.328771,
+      "expected_passage_ids": [
+        "EX-1045-RECEIPT:p1"
+      ],
+      "selected_passage_ids": [
+        "EX-1045-RECEIPT:p1"
+      ]
+    },
+    {
+      "id": "TEST-15",
+      "case_id": "EX-1048",
+      "question": "What measured performance improvement did the alternative achieve?",
+      "field": "measured_improvement",
+      "expected_status": "insufficient",
+      "retrieval_all_hit": null,
+      "task_pass": true,
+      "field_pass": null,
+      "refusal_pass": true,
+      "displayed_answer_on_unanswerable": false,
+      "state": "checked",
+      "predicted_status": "insufficient",
+      "model_completed": true,
+      "seconds": 0.943363,
+      "expected_passage_ids": [],
+      "selected_passage_ids": []
+    },
+    {
+      "id": "TEST-14",
+      "case_id": "EX-1048",
+      "question": "What approval does the substitute-material procedure require before acceptance?",
+      "field": "substitution_procedure",
+      "expected_status": "supported",
+      "retrieval_all_hit": true,
+      "task_pass": true,
+      "field_pass": true,
+      "refusal_pass": null,
+      "displayed_answer_on_unanswerable": false,
+      "state": "checked",
+      "predicted_status": "supported",
+      "model_completed": true,
+      "seconds": 2.018369,
+      "expected_passage_ids": [
+        "SOP-SUB:p1"
+      ],
+      "selected_passage_ids": [
+        "SOP-SUB:p1"
+      ]
+    },
+    {
+      "id": "TEST-01",
+      "case_id": "EX-1044",
+      "question": "Do the dispatch packing list and receiving recount agree on the number of units?",
+      "field": "quantity_conflict",
+      "expected_status": "conflict",
+      "retrieval_all_hit": true,
+      "task_pass": false,
+      "field_pass": true,
+      "refusal_pass": null,
+      "displayed_answer_on_unanswerable": false,
+      "state": "checked",
+      "predicted_status": "supported",
+      "model_completed": true,
+      "seconds": 3.33525,
+      "expected_passage_ids": [
+        "EX-1044-DISPATCH:p1",
+        "EX-1044-RECOUNT:p1"
+      ],
+      "selected_passage_ids": [
+        "EX-1044-DISPATCH:p1",
+        "EX-1044-RECOUNT:p1"
+      ]
+    },
+    {
+      "id": "TEST-05",
+      "case_id": "EX-1045",
+      "question": "What should the missing-temperature-record procedure require before release?",
+      "field": "temperature_procedure",
+      "expected_status": "supported",
+      "retrieval_all_hit": true,
+      "task_pass": true,
+      "field_pass": true,
+      "refusal_pass": null,
+      "displayed_answer_on_unanswerable": false,
+      "state": "checked",
+      "predicted_status": "supported",
+      "model_completed": true,
+      "seconds": 2.628354,
+      "expected_passage_ids": [
+        "SOP-TEMP:p1"
+      ],
+      "selected_passage_ids": [
+        "SOP-TEMP:p1"
+      ]
+    },
+    {
+      "id": "TEST-10",
+      "case_id": "EX-1047",
+      "question": "Do the supplier email and carrier notice give the same arrival estimate?",
+      "field": "eta_conflict",
+      "expected_status": "conflict",
+      "retrieval_all_hit": true,
+      "task_pass": false,
+      "field_pass": false,
+      "refusal_pass": null,
+      "displayed_answer_on_unanswerable": false,
+      "state": "withheld",
+      "predicted_status": null,
+      "model_completed": true,
+      "seconds": 1.520819,
+      "expected_passage_ids": [
+        "EX-1047-CARRIER:p1",
+        "EX-1047-SUPPLIER:p1"
+      ],
+      "selected_passage_ids": []
+    },
+    {
+      "id": "TEST-17",
+      "case_id": "EX-1049",
+      "question": "What does the fictional border-document checklist say to collect?",
+      "field": "document_procedure",
+      "expected_status": "supported",
+      "retrieval_all_hit": true,
+      "task_pass": true,
+      "field_pass": true,
+      "refusal_pass": null,
+      "displayed_answer_on_unanswerable": false,
+      "state": "checked",
+      "predicted_status": "supported",
+      "model_completed": true,
+      "seconds": 2.198154,
+      "expected_passage_ids": [
+        "SOP-CUSTOMS:p1"
+      ],
+      "selected_passage_ids": [
+        "SOP-CUSTOMS:p1"
+      ]
+    },
+    {
+      "id": "TEST-06",
+      "case_id": "EX-1045",
+      "question": "What was the maximum measured temperature during transport?",
+      "field": "maximum_temperature",
+      "expected_status": "insufficient",
+      "retrieval_all_hit": null,
+      "task_pass": true,
+      "field_pass": null,
+      "refusal_pass": true,
+      "displayed_answer_on_unanswerable": false,
+      "state": "checked",
+      "predicted_status": "insufficient",
+      "model_completed": true,
+      "seconds": 1.245424,
+      "expected_passage_ids": [],
+      "selected_passage_ids": []
+    },
+    {
+      "id": "TEST-13",
+      "case_id": "EX-1048",
+      "question": "What material grade did the supplier propose as the alternative?",
+      "field": "proposed_grade",
+      "expected_status": "supported",
+      "retrieval_all_hit": true,
+      "task_pass": true,
+      "field_pass": true,
+      "refusal_pass": null,
+      "displayed_answer_on_unanswerable": false,
+      "state": "checked",
+      "predicted_status": "supported",
+      "model_completed": true,
+      "seconds": 2.269515,
+      "expected_passage_ids": [
+        "EX-1048-OFFER:p1"
+      ],
+      "selected_passage_ids": [
+        "EX-1048-OFFER:p1"
+      ]
+    },
+    {
+      "id": "TEST-09",
+      "case_id": "EX-1046",
+      "question": "Which recipient has confirmed actual receipt of SH-1046?",
+      "field": "confirmed_recipient",
+      "expected_status": "insufficient",
+      "retrieval_all_hit": null,
+      "task_pass": false,
+      "field_pass": null,
+      "refusal_pass": false,
+      "displayed_answer_on_unanswerable": true,
+      "state": "checked",
+      "predicted_status": "conflict",
+      "model_completed": true,
+      "seconds": 3.567298,
+      "expected_passage_ids": [],
+      "selected_passage_ids": [
+        "EX-1046-POD:p1",
+        "SOP-POD:p1"
+      ]
+    },
+    {
+      "id": "TEST-08",
+      "case_id": "EX-1046",
+      "question": "Which procedure applies to an unsigned proof of delivery?",
+      "field": "pod_procedure",
+      "expected_status": "supported",
+      "retrieval_all_hit": true,
+      "task_pass": true,
+      "field_pass": true,
+      "refusal_pass": null,
+      "displayed_answer_on_unanswerable": false,
+      "state": "checked",
+      "predicted_status": "supported",
+      "model_completed": true,
+      "seconds": 2.59518,
+      "expected_passage_ids": [
+        "SOP-POD:p1"
+      ],
+      "selected_passage_ids": [
+        "SOP-POD:p1"
+      ]
+    },
+    {
+      "id": "TEST-12",
+      "case_id": "EX-1047",
+      "question": "What arrival time has been agreed and confirmed?",
+      "field": "confirmed_eta",
+      "expected_status": "insufficient",
+      "retrieval_all_hit": null,
+      "task_pass": true,
+      "field_pass": null,
+      "refusal_pass": true,
+      "displayed_answer_on_unanswerable": false,
+      "state": "checked",
+      "predicted_status": "insufficient",
+      "model_completed": true,
+      "seconds": 1.531223,
+      "expected_passage_ids": [],
+      "selected_passage_ids": []
+    },
+    {
+      "id": "TEST-16",
+      "case_id": "EX-1049",
+      "question": "Which document is missing from the border paperwork check?",
+      "field": "missing_certificate",
+      "expected_status": "supported",
+      "retrieval_all_hit": true,
+      "task_pass": true,
+      "field_pass": true,
+      "refusal_pass": null,
+      "displayed_answer_on_unanswerable": false,
+      "state": "checked",
+      "predicted_status": "supported",
+      "model_completed": true,
+      "seconds": 1.996154,
+      "expected_passage_ids": [
+        "EX-1049-CHECK:p1"
+      ],
+      "selected_passage_ids": [
+        "EX-1049-CHECK:p1"
+      ]
+    },
+    {
+      "id": "TEST-02",
+      "case_id": "EX-1044",
+      "question": "What quantity is specifically recorded by the receiving recount?",
+      "field": "receiving_count",
+      "expected_status": "supported",
+      "retrieval_all_hit": true,
+      "task_pass": true,
+      "field_pass": true,
+      "refusal_pass": null,
+      "displayed_answer_on_unanswerable": false,
+      "state": "checked",
+      "predicted_status": "supported",
+      "model_completed": true,
+      "seconds": 2.288907,
+      "expected_passage_ids": [
+        "EX-1044-RECOUNT:p1"
+      ],
+      "selected_passage_ids": [
+        "EX-1044-RECOUNT:p1"
+      ]
+    },
+    {
+      "id": "TEST-03",
+      "case_id": "EX-1044",
+      "question": "What final accepted quantity has been approved after reconciliation?",
+      "field": "accepted_quantity",
+      "expected_status": "insufficient",
+      "retrieval_all_hit": null,
+      "task_pass": true,
+      "field_pass": null,
+      "refusal_pass": true,
+      "displayed_answer_on_unanswerable": false,
+      "state": "checked",
+      "predicted_status": "insufficient",
+      "model_completed": true,
+      "seconds": 0.985151,
+      "expected_passage_ids": [],
+      "selected_passage_ids": []
+    },
+    {
+      "id": "TEST-18",
+      "case_id": "EX-1049",
+      "question": "What revised clearance release time has been authorized?",
+      "field": "clearance_time",
+      "expected_status": "insufficient",
+      "retrieval_all_hit": null,
+      "task_pass": true,
+      "field_pass": null,
+      "refusal_pass": true,
+      "displayed_answer_on_unanswerable": false,
+      "state": "checked",
+      "predicted_status": "insufficient",
+      "model_completed": true,
+      "seconds": 1.20399,
+      "expected_passage_ids": [],
+      "selected_passage_ids": []
+    }
+  ],
+  "limitations": "Small authored fictional corpus. Held-out questions are on six separate cases within the indexed corpus. Exact source/value checks can reject other reasonable excerpts; quote validation does not establish relevance or truth. Not a real operational accuracy benchmark."
+}

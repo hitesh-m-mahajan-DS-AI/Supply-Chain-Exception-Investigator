@@ -1,0 +1,521 @@
+{
+  "version": "f2.1",
+  "seed": 42,
+  "synthetic": true,
+  "cases": [
+    {
+      "id": "EX-1042",
+      "title": "Inbound delivery delayed",
+      "category": "Delay",
+      "severity": "High",
+      "supplier": "Harbor Materials",
+      "hub": "North hub",
+      "summary": "A reported breakdown moved the estimated arrival. Actual receipt is not confirmed.",
+      "authored_flag": "Reported reason; unverified arrival",
+      "synthetic": true,
+      "suggested_question": "What delay reason did the supplier report?",
+      "timeline": [
+        {
+          "timestamp": "2026-03-13T14:00:00+00:00",
+          "label": "Supplier delay notice",
+          "source_id": "EX-1042-NOTICE"
+        },
+        {
+          "timestamp": "2026-03-13T14:20:00+00:00",
+          "label": "Carrier departure scan",
+          "source_id": "EX-1042-SCAN"
+        },
+        {
+          "timestamp": "2026-03-13T14:40:00+00:00",
+          "label": "Planning follow-up",
+          "source_id": "EX-1042-NOTE"
+        }
+      ]
+    },
+    {
+      "id": "EX-1043",
+      "title": "Damaged packaging on receipt",
+      "category": "Damage",
+      "severity": "Medium",
+      "supplier": "Cedar Packaging",
+      "hub": "Central hub",
+      "summary": "Damaged cartons were counted and held for quality review.",
+      "authored_flag": "Quarantine; replacement not approved",
+      "synthetic": true,
+      "suggested_question": "How many damaged cartons were recorded?",
+      "timeline": [
+        {
+          "timestamp": "2026-03-13T14:00:00+00:00",
+          "label": "Damaged carton inspection",
+          "source_id": "EX-1043-INSPECT"
+        },
+        {
+          "timestamp": "2026-03-13T14:20:00+00:00",
+          "label": "Supplier evidence request",
+          "source_id": "EX-1043-NOTICE"
+        },
+        {
+          "timestamp": "2026-03-13T14:40:00+00:00",
+          "label": "Quality review queue",
+          "source_id": "EX-1043-NOTE"
+        }
+      ]
+    },
+    {
+      "id": "EX-1044",
+      "title": "Dispatch and receipt quantities disagree",
+      "category": "Quantity",
+      "severity": "High",
+      "supplier": "Harbor Materials",
+      "hub": "North hub",
+      "summary": "Two records give different counts for the same delivery.",
+      "authored_flag": "Conflicting counts; no reconciliation",
+      "synthetic": true,
+      "suggested_question": "Do the dispatch and receiving records agree on quantity?",
+      "timeline": [
+        {
+          "timestamp": "2026-03-13T14:00:00+00:00",
+          "label": "Dispatch packing list",
+          "source_id": "EX-1044-DISPATCH"
+        },
+        {
+          "timestamp": "2026-03-13T14:00:00+00:00",
+          "label": "Signed receiving recount",
+          "source_id": "EX-1044-RECOUNT"
+        },
+        {
+          "timestamp": "2026-03-13T14:40:00+00:00",
+          "label": "Open discrepancy review",
+          "source_id": "EX-1044-NOTE"
+        }
+      ]
+    },
+    {
+      "id": "EX-1045",
+      "title": "Temperature evidence missing",
+      "category": "Missing records",
+      "severity": "High",
+      "supplier": "Meridian Freight",
+      "hub": "North hub",
+      "summary": "The shipment arrived without its required temperature record.",
+      "authored_flag": "Missing measurement data",
+      "synthetic": true,
+      "suggested_question": "Which measurement document is missing?",
+      "timeline": [
+        {
+          "timestamp": "2026-03-13T14:00:00+00:00",
+          "label": "Missing logger attachment",
+          "source_id": "EX-1045-RECEIPT"
+        },
+        {
+          "timestamp": "2026-03-13T14:20:00+00:00",
+          "label": "Pending quality release",
+          "source_id": "EX-1045-QUALITY"
+        },
+        {
+          "timestamp": "2026-03-13T14:40:00+00:00",
+          "label": "Logger file requested",
+          "source_id": "EX-1045-REQUEST"
+        }
+      ]
+    },
+    {
+      "id": "EX-1046",
+      "title": "Proof of delivery is unsigned",
+      "category": "Delivery proof",
+      "severity": "Medium",
+      "supplier": "Meridian Freight",
+      "hub": "North hub",
+      "summary": "The portal reports delivery but signed receipt evidence is absent.",
+      "authored_flag": "Reported delivery; receipt unconfirmed",
+      "synthetic": true,
+      "suggested_question": "What does the carrier portal report?",
+      "timeline": [
+        {
+          "timestamp": "2026-03-13T14:00:00+00:00",
+          "label": "Carrier portal status",
+          "source_id": "EX-1046-PORTAL"
+        },
+        {
+          "timestamp": "2026-03-13T14:20:00+00:00",
+          "label": "Unsigned delivery document",
+          "source_id": "EX-1046-POD"
+        },
+        {
+          "timestamp": "2026-03-13T14:40:00+00:00",
+          "label": "Destination follow-up",
+          "source_id": "EX-1046-NOTE"
+        }
+      ]
+    },
+    {
+      "id": "EX-1047",
+      "title": "Arrival estimates conflict",
+      "category": "Conflicting ETA",
+      "severity": "High",
+      "supplier": "Harbor Materials",
+      "hub": "Central hub",
+      "summary": "Supplier and carrier records disagree on the expected arrival.",
+      "authored_flag": "Two estimates; no agreed ETA",
+      "synthetic": true,
+      "suggested_question": "Do the supplier and carrier arrival estimates agree?",
+      "timeline": [
+        {
+          "timestamp": "2026-03-13T14:00:00+00:00",
+          "label": "Supplier arrival estimate",
+          "source_id": "EX-1047-SUPPLIER"
+        },
+        {
+          "timestamp": "2026-03-13T14:00:00+00:00",
+          "label": "Carrier arrival estimate",
+          "source_id": "EX-1047-CARRIER"
+        },
+        {
+          "timestamp": "2026-03-13T14:40:00+00:00",
+          "label": "ETA clarification requested",
+          "source_id": "EX-1047-NOTE"
+        }
+      ]
+    },
+    {
+      "id": "EX-1048",
+      "title": "Substitute material awaits approval",
+      "category": "Substitution",
+      "severity": "Medium",
+      "supplier": "Cedar Packaging",
+      "hub": "North hub",
+      "summary": "An alternative material was proposed without engineering approval.",
+      "authored_flag": "Proposal only; no equivalence evidence",
+      "synthetic": true,
+      "suggested_question": "Which substitute material was proposed?",
+      "timeline": [
+        {
+          "timestamp": "2026-03-13T14:00:00+00:00",
+          "label": "Alternative material offered",
+          "source_id": "EX-1048-OFFER"
+        },
+        {
+          "timestamp": "2026-03-13T14:20:00+00:00",
+          "label": "Engineering change pending",
+          "source_id": "EX-1048-ENGINEER"
+        },
+        {
+          "timestamp": "2026-03-13T14:40:00+00:00",
+          "label": "Test evidence unavailable",
+          "source_id": "EX-1048-NOTE"
+        }
+      ]
+    },
+    {
+      "id": "EX-1049",
+      "title": "Border document is missing",
+      "category": "Missing paperwork",
+      "severity": "Medium",
+      "supplier": "Meridian Freight",
+      "hub": "Central hub",
+      "summary": "A required case-document attachment is absent and review is pending.",
+      "authored_flag": "Missing certificate; no clearance time",
+      "synthetic": true,
+      "suggested_question": "Which border-document attachment is missing?",
+      "timeline": [
+        {
+          "timestamp": "2026-03-13T14:00:00+00:00",
+          "label": "Border paperwork check",
+          "source_id": "EX-1049-CHECK"
+        },
+        {
+          "timestamp": "2026-03-13T14:20:00+00:00",
+          "label": "Document review hold",
+          "source_id": "EX-1049-HOLD"
+        },
+        {
+          "timestamp": "2026-03-13T14:40:00+00:00",
+          "label": "Document owner contacted",
+          "source_id": "EX-1049-REQUEST"
+        }
+      ]
+    }
+  ],
+  "documents": [
+    {
+      "id": "SOP-DELAY",
+      "case_id": null,
+      "title": "Delayed delivery review",
+      "kind": "procedure",
+      "recorded_at": "2026-03-13T14:00:00+00:00",
+      "text": "For a delayed shipment, record the reported reason and revised estimated arrival. Request a current carrier status before escalating to the planning owner. An estimate is not a delivery confirmation.",
+      "synthetic": true
+    },
+    {
+      "id": "SOP-DAMAGE",
+      "case_id": null,
+      "title": "Damaged receipt handling",
+      "kind": "procedure",
+      "recorded_at": "2026-03-13T14:00:00+00:00",
+      "text": "For damaged cartons, keep affected goods in quarantine. Record counts, photographs and lot identifiers. A quality reviewer must authorize release or replacement; a supplier request is not authorization.",
+      "synthetic": true
+    },
+    {
+      "id": "SOP-QUANTITY",
+      "case_id": null,
+      "title": "Disputed quantity reconciliation",
+      "kind": "procedure",
+      "recorded_at": "2026-03-13T14:00:00+00:00",
+      "text": "When dispatch and receiving quantities disagree, preserve both records and request a joint recount. Keep the final accepted quantity unresolved until the designated receiving owner signs the reconciliation.",
+      "synthetic": true
+    },
+    {
+      "id": "SOP-TEMP",
+      "case_id": null,
+      "title": "Missing temperature records",
+      "kind": "procedure",
+      "recorded_at": "2026-03-13T14:00:00+00:00",
+      "text": "If a required temperature logger file is missing, quarantine the affected goods and request the logger file. The quality owner must review the data before release. Do not infer measured temperatures from shipping setpoints.",
+      "synthetic": true
+    },
+    {
+      "id": "SOP-POD",
+      "case_id": null,
+      "title": "Unsigned proof-of-delivery review",
+      "kind": "procedure",
+      "recorded_at": "2026-03-13T14:00:00+00:00",
+      "text": "For an unsigned proof-of-delivery record, request a signed document and verify receipt with the destination team. Preserve the carrier status as a report. Do not mark receipt as confirmed using the portal status alone.",
+      "synthetic": true
+    },
+    {
+      "id": "SOP-SUB",
+      "case_id": null,
+      "title": "Substitute material approval",
+      "kind": "procedure",
+      "recorded_at": "2026-03-13T14:00:00+00:00",
+      "text": "Before accepting a substitute material, obtain written engineering change approval and confirm the required specification. A supplier proposal is not approval. Keep the alternative on hold until the authorized reviewer responds.",
+      "synthetic": true
+    },
+    {
+      "id": "SOP-CUSTOMS",
+      "case_id": null,
+      "title": "Fictional border-document checklist",
+      "kind": "procedure",
+      "recorded_at": "2026-03-13T14:00:00+00:00",
+      "text": "For missing border paperwork in this demonstration, collect the certificate of origin and supporting invoice, then ask the document owner to review completeness. Do not invent a clearance time. This fictional checklist is not customs or legal advice.",
+      "synthetic": true
+    },
+    {
+      "id": "EX-1042-NOTICE",
+      "case_id": "EX-1042",
+      "title": "Supplier delay notice",
+      "kind": "supplier_notice",
+      "recorded_at": "2026-03-13T14:00:00+00:00",
+      "text": "For shipment SH-1042, Harbor Materials reported a vehicle breakdown. Its revised estimated arrival is 14 March 2026 at 18:00. This is an unverified supplier estimate; no delivery confirmation is attached.",
+      "synthetic": true
+    },
+    {
+      "id": "EX-1042-SCAN",
+      "case_id": "EX-1042",
+      "title": "Carrier departure scan",
+      "kind": "carrier_record",
+      "recorded_at": "2026-03-13T14:20:00+00:00",
+      "text": "Carrier scan for shipment SH-1042 records departure from West depot at 11:20 on 13 March 2026. The departure scan does not confirm arrival.",
+      "synthetic": true
+    },
+    {
+      "id": "EX-1042-NOTE",
+      "case_id": "EX-1042",
+      "title": "Planning follow-up",
+      "kind": "internal_note",
+      "recorded_at": "2026-03-13T14:40:00+00:00",
+      "text": "The planning owner requested a fresh carrier status. The root cause and actual delivery time have not been independently verified.",
+      "synthetic": true
+    },
+    {
+      "id": "EX-1043-INSPECT",
+      "case_id": "EX-1043",
+      "title": "Damaged carton inspection",
+      "kind": "receiving_record",
+      "recorded_at": "2026-03-13T14:00:00+00:00",
+      "text": "Receiving inspection counted 13 damaged cartons out of 300 received cartons. The goods remain in quarantine, pending quality review.",
+      "synthetic": true
+    },
+    {
+      "id": "EX-1043-NOTICE",
+      "case_id": "EX-1043",
+      "title": "Supplier evidence request",
+      "kind": "supplier_notice",
+      "recorded_at": "2026-03-13T14:20:00+00:00",
+      "text": "The supplier requested photographs and lot identifiers before considering replacement. No replacement approval has been issued.",
+      "synthetic": true
+    },
+    {
+      "id": "EX-1043-NOTE",
+      "case_id": "EX-1043",
+      "title": "Quality review queue",
+      "kind": "internal_note",
+      "recorded_at": "2026-03-13T14:40:00+00:00",
+      "text": "The quality review is still pending. The disposal cost and replacement completion date are not recorded.",
+      "synthetic": true
+    },
+    {
+      "id": "EX-1044-DISPATCH",
+      "case_id": "EX-1044",
+      "title": "Dispatch packing list",
+      "kind": "supplier_notice",
+      "recorded_at": "2026-03-13T14:00:00+00:00",
+      "text": "The dispatch packing list states 100 units for delivery RC-1044.",
+      "synthetic": true
+    },
+    {
+      "id": "EX-1044-RECOUNT",
+      "case_id": "EX-1044",
+      "title": "Signed receiving recount",
+      "kind": "receiving_record",
+      "recorded_at": "2026-03-13T14:00:00+00:00",
+      "text": "The receiving recount records 80 units for delivery RC-1044. This count was signed by the receiving clerk.",
+      "synthetic": true
+    },
+    {
+      "id": "EX-1044-NOTE",
+      "case_id": "EX-1044",
+      "title": "Open discrepancy review",
+      "kind": "internal_note",
+      "recorded_at": "2026-03-13T14:40:00+00:00",
+      "text": "A discrepancy review is open. The records have not been reconciled and no final accepted quantity has been approved.",
+      "synthetic": true
+    },
+    {
+      "id": "EX-1045-RECEIPT",
+      "case_id": "EX-1045",
+      "title": "Missing logger attachment",
+      "kind": "receiving_record",
+      "recorded_at": "2026-03-13T14:00:00+00:00",
+      "text": "Shipment SH-1045 arrived at North hub. The required temperature logger file was not provided with the shipment.",
+      "synthetic": true
+    },
+    {
+      "id": "EX-1045-QUALITY",
+      "case_id": "EX-1045",
+      "title": "Pending quality release",
+      "kind": "internal_note",
+      "recorded_at": "2026-03-13T14:20:00+00:00",
+      "text": "Quality release is pending. The maximum recorded temperature and exposure duration are unknown because the logger file is missing.",
+      "synthetic": true
+    },
+    {
+      "id": "EX-1045-REQUEST",
+      "case_id": "EX-1045",
+      "title": "Logger file requested",
+      "kind": "internal_note",
+      "recorded_at": "2026-03-13T14:40:00+00:00",
+      "text": "The document owner requested the logger file from the carrier. No logger attachment has been received in this case file.",
+      "synthetic": true
+    },
+    {
+      "id": "EX-1046-PORTAL",
+      "case_id": "EX-1046",
+      "title": "Carrier portal status",
+      "kind": "carrier_record",
+      "recorded_at": "2026-03-13T14:00:00+00:00",
+      "text": "The carrier portal marks shipment SH-1046 as delivered at 12:40 on 13 March 2026. This is a portal status report.",
+      "synthetic": true
+    },
+    {
+      "id": "EX-1046-POD",
+      "case_id": "EX-1046",
+      "title": "Unsigned delivery document",
+      "kind": "carrier_record",
+      "recorded_at": "2026-03-13T14:20:00+00:00",
+      "text": "The proof-of-delivery document has no recipient signature. The destination team's receipt confirmation is not available.",
+      "synthetic": true
+    },
+    {
+      "id": "EX-1046-NOTE",
+      "case_id": "EX-1046",
+      "title": "Destination follow-up",
+      "kind": "internal_note",
+      "recorded_at": "2026-03-13T14:40:00+00:00",
+      "text": "The planner has asked the destination team to confirm receipt. No response has been added to the case file.",
+      "synthetic": true
+    },
+    {
+      "id": "EX-1047-SUPPLIER",
+      "case_id": "EX-1047",
+      "title": "Supplier arrival estimate",
+      "kind": "supplier_notice",
+      "recorded_at": "2026-03-13T14:00:00+00:00",
+      "text": "The supplier email sent at 09:00 states an expected arrival of 16 March 2026 at 10:00 for SH-1047.",
+      "synthetic": true
+    },
+    {
+      "id": "EX-1047-CARRIER",
+      "case_id": "EX-1047",
+      "title": "Carrier arrival estimate",
+      "kind": "carrier_record",
+      "recorded_at": "2026-03-13T14:00:00+00:00",
+      "text": "The carrier notice sent at 09:00 states an expected arrival of 18 March 2026 at 10:00 for SH-1047.",
+      "synthetic": true
+    },
+    {
+      "id": "EX-1047-NOTE",
+      "case_id": "EX-1047",
+      "title": "ETA clarification requested",
+      "kind": "internal_note",
+      "recorded_at": "2026-03-13T14:40:00+00:00",
+      "text": "Neither arrival estimate is confirmed. The planning owner requested clarification; no agreed arrival time is recorded.",
+      "synthetic": true
+    },
+    {
+      "id": "EX-1048-OFFER",
+      "case_id": "EX-1048",
+      "title": "Alternative material offered",
+      "kind": "supplier_notice",
+      "recorded_at": "2026-03-13T14:00:00+00:00",
+      "text": "The supplier proposed grade B material instead of the required grade A material. This is a proposal only; no equivalence test result is attached.",
+      "synthetic": true
+    },
+    {
+      "id": "EX-1048-ENGINEER",
+      "case_id": "EX-1048",
+      "title": "Engineering change pending",
+      "kind": "internal_note",
+      "recorded_at": "2026-03-13T14:20:00+00:00",
+      "text": "The engineering change board has not approved the substitution. The alternative material remains on hold.",
+      "synthetic": true
+    },
+    {
+      "id": "EX-1048-NOTE",
+      "case_id": "EX-1048",
+      "title": "Test evidence unavailable",
+      "kind": "internal_note",
+      "recorded_at": "2026-03-13T14:40:00+00:00",
+      "text": "No measured performance improvement or approved substitution certificate is recorded in this case.",
+      "synthetic": true
+    },
+    {
+      "id": "EX-1049-CHECK",
+      "case_id": "EX-1049",
+      "title": "Border paperwork check",
+      "kind": "internal_note",
+      "recorded_at": "2026-03-13T14:00:00+00:00",
+      "text": "The commercial invoice was provided for shipment SH-1049. The certificate of origin is missing.",
+      "synthetic": true
+    },
+    {
+      "id": "EX-1049-HOLD",
+      "case_id": "EX-1049",
+      "title": "Document review hold",
+      "kind": "carrier_record",
+      "recorded_at": "2026-03-13T14:20:00+00:00",
+      "text": "The shipment is awaiting document review at the border. No clearance authorization or revised release time is recorded.",
+      "synthetic": true
+    },
+    {
+      "id": "EX-1049-REQUEST",
+      "case_id": "EX-1049",
+      "title": "Document owner contacted",
+      "kind": "internal_note",
+      "recorded_at": "2026-03-13T14:40:00+00:00",
+      "text": "The planner asked the document owner for the missing certificate. No reply is attached to this case file.",
+      "synthetic": true
+    }
+  ],
+  "scope": "Authored fictional demonstration records and procedures. No real company policies, shipments, legal guidance or operational outcomes."
+}

@@ -1,0 +1,15 @@
+{
+  "model": "qwen2.5:1.5b",
+  "prompt_version": "v2",
+  "prompt_sha256": "c74808c1c469bafb4eb89c9c4005995b3e5fb7abc569c9221889b441ec9a68ed",
+  "selection": "Highest exact development task checks, then field and output checks; ties prefer 1.5B and v2.",
+  "development_questions": 6,
+  "engine_sha256": "61d4d4d854ffa116abdd376a3770554fbe232e73faaf8013b72ecf06405981ee",
+  "corpus_sha256": "112b847e690f65eac2d1527ed20079928579a3a05f339c4d2e51e7f135a7b1ac",
+  "frozen_at": "2026-10-26T11:30:17.818515+00:00",
+  "evaluation_script_sha256": "2cc3384cc6442fe3994af109b8d2f4c23ef77107727cbfd665f1272cea405f9c",
+  "top_k": 4,
+  "minimum_tfidf": 0.06,
+  "split": "2 dev cases / 6 held-out cases; fixed authored corpus",
+  "task_check": "Exact stance + exact gold passage set + required value fragments. A strict fixture check, not a general semantic correctness metric."
+}

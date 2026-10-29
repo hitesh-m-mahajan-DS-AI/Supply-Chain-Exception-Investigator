@@ -1,0 +1,20 @@
+{
+  "corpus_sha256": "c1345f9f7bd7b1516b0017100897ffd7a1da014589ed367422f8fc4daa06ca9f",
+  "cases": 8,
+  "documents": 31,
+  "development_cases": [
+    "EX-1042",
+    "EX-1043"
+  ],
+  "heldout_cases": [
+    "EX-1044",
+    "EX-1045",
+    "EX-1046",
+    "EX-1047",
+    "EX-1048",
+    "EX-1049"
+  ],
+  "development_questions": 6,
+  "heldout_questions": 18,
+  "seed": 42
+}

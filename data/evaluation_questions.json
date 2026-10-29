@@ -1,0 +1,313 @@
+[
+  {
+    "id": "TEST-11",
+    "case_id": "EX-1047",
+    "question": "Which expected arrival does the carrier notice specifically state?",
+    "expected_status": "supported",
+    "expected_passage_ids": [
+      "EX-1047-CARRIER:p1"
+    ],
+    "expected_phrases": [
+      "18 March 2026 at 10:00"
+    ],
+    "field": "carrier_eta",
+    "split": "heldout"
+  },
+  {
+    "id": "TEST-07",
+    "case_id": "EX-1046",
+    "question": "What delivery status and time does the carrier portal report?",
+    "expected_status": "supported",
+    "expected_passage_ids": [
+      "EX-1046-PORTAL:p1"
+    ],
+    "expected_phrases": [
+      "delivered at 12:40"
+    ],
+    "field": "reported_delivery",
+    "split": "heldout"
+  },
+  {
+    "id": "TEST-04",
+    "case_id": "EX-1045",
+    "question": "Which required file was not provided with SH-1045?",
+    "expected_status": "supported",
+    "expected_passage_ids": [
+      "EX-1045-RECEIPT:p1"
+    ],
+    "expected_phrases": [
+      "temperature logger file"
+    ],
+    "field": "missing_document",
+    "split": "heldout"
+  },
+  {
+    "id": "TEST-15",
+    "case_id": "EX-1048",
+    "question": "What measured performance improvement did the alternative achieve?",
+    "expected_status": "insufficient",
+    "expected_passage_ids": [],
+    "expected_phrases": [],
+    "field": "measured_improvement",
+    "split": "heldout"
+  },
+  {
+    "id": "TEST-14",
+    "case_id": "EX-1048",
+    "question": "What approval does the substitute-material procedure require before acceptance?",
+    "expected_status": "supported",
+    "expected_passage_ids": [
+      "SOP-SUB:p1"
+    ],
+    "expected_phrases": [
+      "written engineering change approval"
+    ],
+    "field": "substitution_procedure",
+    "split": "heldout"
+  },
+  {
+    "id": "TEST-01",
+    "case_id": "EX-1044",
+    "question": "Do the dispatch packing list and receiving recount agree on the number of units?",
+    "expected_status": "conflict",
+    "expected_passage_ids": [
+      "EX-1044-DISPATCH:p1",
+      "EX-1044-RECOUNT:p1"
+    ],
+    "expected_phrases": [
+      "100 units",
+      "80 units"
+    ],
+    "field": "quantity_conflict",
+    "split": "heldout"
+  },
+  {
+    "id": "DEV-06",
+    "case_id": "EX-1043",
+    "question": "What confirmed disposal cost was recorded for the damaged cartons?",
+    "expected_status": "insufficient",
+    "expected_passage_ids": [],
+    "expected_phrases": [],
+    "field": "disposal_cost",
+    "split": "development"
+  },
+  {
+    "id": "TEST-05",
+    "case_id": "EX-1045",
+    "question": "What should the missing-temperature-record procedure require before release?",
+    "expected_status": "supported",
+    "expected_passage_ids": [
+      "SOP-TEMP:p1"
+    ],
+    "expected_phrases": [
+      "quarantine",
+      "logger file"
+    ],
+    "field": "temperature_procedure",
+    "split": "heldout"
+  },
+  {
+    "id": "TEST-10",
+    "case_id": "EX-1047",
+    "question": "Do the supplier email and carrier notice give the same arrival estimate?",
+    "expected_status": "conflict",
+    "expected_passage_ids": [
+      "EX-1047-SUPPLIER:p1",
+      "EX-1047-CARRIER:p1"
+    ],
+    "expected_phrases": [
+      "16 March 2026",
+      "18 March 2026"
+    ],
+    "field": "eta_conflict",
+    "split": "heldout"
+  },
+  {
+    "id": "TEST-17",
+    "case_id": "EX-1049",
+    "question": "What does the fictional border-document checklist say to collect?",
+    "expected_status": "supported",
+    "expected_passage_ids": [
+      "SOP-CUSTOMS:p1"
+    ],
+    "expected_phrases": [
+      "certificate of origin",
+      "supporting invoice"
+    ],
+    "field": "document_procedure",
+    "split": "heldout"
+  },
+  {
+    "id": "TEST-06",
+    "case_id": "EX-1045",
+    "question": "What was the maximum measured temperature during transport?",
+    "expected_status": "insufficient",
+    "expected_passage_ids": [],
+    "expected_phrases": [],
+    "field": "maximum_temperature",
+    "split": "heldout"
+  },
+  {
+    "id": "TEST-13",
+    "case_id": "EX-1048",
+    "question": "What material grade did the supplier propose as the alternative?",
+    "expected_status": "supported",
+    "expected_passage_ids": [
+      "EX-1048-OFFER:p1"
+    ],
+    "expected_phrases": [
+      "grade B material"
+    ],
+    "field": "proposed_grade",
+    "split": "heldout"
+  },
+  {
+    "id": "DEV-02",
+    "case_id": "EX-1042",
+    "question": "Which estimated arrival did the supplier give for SH-1042?",
+    "expected_status": "supported",
+    "expected_passage_ids": [
+      "EX-1042-NOTICE:p1"
+    ],
+    "expected_phrases": [
+      "14 March 2026 at 18:00"
+    ],
+    "field": "reported_eta",
+    "split": "development"
+  },
+  {
+    "id": "TEST-09",
+    "case_id": "EX-1046",
+    "question": "Which recipient has confirmed actual receipt of SH-1046?",
+    "expected_status": "insufficient",
+    "expected_passage_ids": [],
+    "expected_phrases": [],
+    "field": "confirmed_recipient",
+    "split": "heldout"
+  },
+  {
+    "id": "DEV-01",
+    "case_id": "EX-1042",
+    "question": "What reason did Harbor Materials report for the delay?",
+    "expected_status": "supported",
+    "expected_passage_ids": [
+      "EX-1042-NOTICE:p1"
+    ],
+    "expected_phrases": [
+      "vehicle breakdown"
+    ],
+    "field": "reported_reason",
+    "split": "development"
+  },
+  {
+    "id": "TEST-08",
+    "case_id": "EX-1046",
+    "question": "Which procedure applies to an unsigned proof of delivery?",
+    "expected_status": "supported",
+    "expected_passage_ids": [
+      "SOP-POD:p1"
+    ],
+    "expected_phrases": [
+      "signed document",
+      "destination team"
+    ],
+    "field": "pod_procedure",
+    "split": "heldout"
+  },
+  {
+    "id": "DEV-03",
+    "case_id": "EX-1042",
+    "question": "What actual delivery time has been independently confirmed?",
+    "expected_status": "insufficient",
+    "expected_passage_ids": [],
+    "expected_phrases": [],
+    "field": "confirmed_delivery",
+    "split": "development"
+  },
+  {
+    "id": "TEST-12",
+    "case_id": "EX-1047",
+    "question": "What arrival time has been agreed and confirmed?",
+    "expected_status": "insufficient",
+    "expected_passage_ids": [],
+    "expected_phrases": [],
+    "field": "confirmed_eta",
+    "split": "heldout"
+  },
+  {
+    "id": "DEV-04",
+    "case_id": "EX-1043",
+    "question": "How many damaged cartons did the receiving inspection count?",
+    "expected_status": "supported",
+    "expected_passage_ids": [
+      "EX-1043-INSPECT:p1"
+    ],
+    "expected_phrases": [
+      "13 damaged cartons"
+    ],
+    "field": "damaged_count",
+    "split": "development"
+  },
+  {
+    "id": "DEV-05",
+    "case_id": "EX-1043",
+    "question": "What does the procedure require for damaged goods before release?",
+    "expected_status": "supported",
+    "expected_passage_ids": [
+      "SOP-DAMAGE:p1"
+    ],
+    "expected_phrases": [
+      "quarantine"
+    ],
+    "field": "handling_procedure",
+    "split": "development"
+  },
+  {
+    "id": "TEST-16",
+    "case_id": "EX-1049",
+    "question": "Which document is missing from the border paperwork check?",
+    "expected_status": "supported",
+    "expected_passage_ids": [
+      "EX-1049-CHECK:p1"
+    ],
+    "expected_phrases": [
+      "certificate of origin"
+    ],
+    "field": "missing_certificate",
+    "split": "heldout"
+  },
+  {
+    "id": "TEST-02",
+    "case_id": "EX-1044",
+    "question": "What quantity is specifically recorded by the receiving recount?",
+    "expected_status": "supported",
+    "expected_passage_ids": [
+      "EX-1044-RECOUNT:p1"
+    ],
+    "expected_phrases": [
+      "80 units"
+    ],
+    "field": "receiving_count",
+    "split": "heldout"
+  },
+  {
+    "id": "TEST-03",
+    "case_id": "EX-1044",
+    "question": "What final accepted quantity has been approved after reconciliation?",
+    "expected_status": "insufficient",
+    "expected_passage_ids": [],
+    "expected_phrases": [],
+    "field": "accepted_quantity",
+    "split": "heldout"
+  },
+  {
+    "id": "TEST-18",
+    "case_id": "EX-1049",
+    "question": "What revised clearance release time has been authorized?",
+    "expected_status": "insufficient",
+    "expected_passage_ids": [],
+    "expected_phrases": [],
+    "field": "clearance_time",
+    "split": "heldout"
+  }
+]
